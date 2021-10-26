@@ -1,4 +1,5 @@
 <template>
+    <Title>{{ $route.name === 'index' ? 'Home' : $route.name }} | TNT MAN INC</Title>
     <div>
         <nav class="shadow-lg h-24 flex flex-row items-center">
             <h1 class="text-4xl ml-4">TNT MAN INC</h1>
@@ -10,6 +11,9 @@
         <slot />
     </div>
 </template>
+
+<script lang="ts" setup>
+</script>
 
 <style>
 .btn {
