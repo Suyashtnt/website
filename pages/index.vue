@@ -1,14 +1,8 @@
 <template>
-  <div w:w="screen" w:grid="~ cols-5" w:justify="center">
+  <div class="w-screen grid grid-cols-4 justify-center">
     <div></div>
-    <div class="glitch" w:grid="col-span-3">
-      <glitched-writer
-        class="w:w-full text-center"
-        :text="phrase"
-        appear
-        v-for="idx in [1, 2, 3]"
-        :key="idx"
-      ></glitched-writer>
+    <div class="col-span-3">
+      <glitched-writer class="w:w-full text-center glitch" :text="phrase" appear></glitched-writer>
     </div>
     <div></div>
   </div>
