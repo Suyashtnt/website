@@ -6,7 +6,7 @@
             <div class="flex-grow"></div>
             <div class="flex flex-row mr-8">
                 <button class="btn" @click="$router.push('/')">Home</button>
-                <button class="btn" @click="$router.push('/about')">about</button>
+                <button class="btn" @click="$router.push('/about')">About</button>
             </div>
         </nav>
         <slot />
