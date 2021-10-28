@@ -1,40 +1,31 @@
 <template>
-  <div>
-    <p class="text-center text-4xl">
-      <glitched-writer class="w-full" :text="smallText" appear></glitched-writer>
-    </p>
-    <div class="text-center">
-      <glitched-writer class="w:w-full text-center glitch" :text="bigText" appear></glitched-writer>
-    </div>
+  <div class="flex flex-col gap-6">
+    <section class="h-32 flex">
+      <div class="grid grid-cols-2 divide-x items-center h-32 w-9/10">
+        <p class="text-8xl text-right mr-8 justify-self-end">
+          <glitched-text text="WELCOME TO" />
+        </p>
+        <div class="text-8xl h-full flex items-center">TNT MAN INC</div>
+      </div>
+    </section>
+    <hr class="w-8/10 self-center" />
+    <section class="h-32">
+      <div class="grid grid-cols-2 divide-x items-center h-32 w-9/10">
+        <p class="text-9xl text-right mr-8">
+          <glitched-text text="ABOUT ME" />
+        </p>
+        <div class="h-full flex items-center">
+          <div class="ml-8 self-center h-full w-full text-4xl">
+            Hi, I'm
+            <span
+              v-for="alias, idx in ['A Badly Drawn TABS/G Person', 'TNT MAN', 'Suyashtnt']"
+              :key="idx"
+            >
+              <span class="font-mono bg-gray-900">{{ alias }}</span>,
+            </span> and more online (Dont ask why i have so many name). I like to program random not-so-useful and g a m i n g.
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
-
-<script lang="ts" setup>
-import { ref } from 'vue'
-import GlitchedWriter from 'vue-glitched-writer'
-
-const bigTexts = [
-  "TNT MAN INC",
-  "COMING SOON"
-]
-
-const smallTexts = [
-  "WELCOME TO",
-  "The website of a really bad coder. Its really bare-bones for now, but actual content is"
-]
-
-let idx = ref(0)
-
-let bigText = ref(bigTexts[0])
-let smallText = ref(smallTexts[0])
-
-setInterval(() => {
-  idx.value++
-  if (idx.value >= bigTexts.length) {
-    idx.value = 0
-  }
-
-  bigText.value = bigTexts[idx.value]
-  smallText.value = smallTexts[idx.value]
-}, 7000)
-</script>
