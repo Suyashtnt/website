@@ -1,14 +1,29 @@
 <template>
+  <div>
     <Title>{{ $route.name === 'index' ? 'Home' : $route.name }} | TNT MAN INC</Title>
     <div>
-        <nav role="navigation" class="shadow-lg h-24 flex flex-row items-center mb-12">
-            <h1 class="text-4xl ml-4">TNT MAN INC</h1>
-            <div class="flex-grow"></div>
-            <div class="flex flex-row mr-8">
-                <btn @click="$router.push('/')">Home</btn>
-                <btn @click="$router.push('/about')">About</btn>
-            </div>
-        </nav>
-        <slot />
+      <nav role="navigation" class="shadow-2xl h-24 flex flex-row items-center sticky top-0 z-50 bg-[#222]">
+        <div class="flex flex-col ml-4">
+          <glitched-text text="TNT MAN INC" class="text-5xl" />
+          <h2 clas6="text-3xl">
+            Making random things since 2017
+          </h2>
+        </div>
+        <div class="flex-grow" />
+        <div class="flex flex-row mr-8">
+          <btn @click="$router.push('/')">
+            Home
+          </btn>
+          <btn @click="$router.push('/about')">
+            About
+          </btn>
+        </div>
+      </nav>
+      <slot />
+
+      <footer class="bg-black h-24">
+        <glitched-text text="MORE COMING SOON" class="text-8xl text-center" />
+      </footer>
     </div>
+  </div>
 </template>
