@@ -8,8 +8,8 @@
         "**/Thumbs.db": true,
         "**/node_modules": true,
         "node_modules": true,
-        "**/.nuxt": false,
-        ".nuxt": false
+        "**/.nuxt": true,
+        ".nuxt": true
     },
     "explorerExclude.backup": null
 }

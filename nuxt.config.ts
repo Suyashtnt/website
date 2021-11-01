@@ -1,21 +1,26 @@
-import { defineNuxtConfig } from "nuxt3";
+import { defineNuxtConfig } from 'nuxt3'
 
 export default defineNuxtConfig({
-  buildModules: ["nuxt-windicss"],
+  buildModules: ['nuxt-windicss'],
+  css: [
+    'primevue/resources/themes/arya-blue/theme.css',
+    'primevue/resources/primevue.css',
+    'primeicons/primeicons.css'
+  ],
   meta: {
     htmlAttrs: {
-      lang: "en",
+      lang: 'en'
     },
     meta: [
       {
-        name: "description",
+        name: 'description',
         content:
-          "Welcome To TNT MAN INC. The place where the most random stuff is mashed together into this monstrocity of a website",
+          'Welcome To TNT MAN INC. The place where the most random stuff is mashed together into this monstrocity of a website'
       },
       {
-        name: "viewport",
-        content: "width=device-width, initial-scale=1",
-      },
-    ],
-  },
-});
+        name: 'viewport',
+        content: 'width=device-width, initial-scale=1'
+      }
+    ]
+  }
+})
