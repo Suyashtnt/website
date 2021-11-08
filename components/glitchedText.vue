@@ -6,7 +6,7 @@
     preset="nier"
     :options="{
       interval: 1,
-      steps: 10
+      steps: 25
     }
     "
   />

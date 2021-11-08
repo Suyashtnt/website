@@ -17,13 +17,14 @@
     "eslint-plugin-promise": "^5.1.1",
     "eslint-plugin-vue": "^8.0.3",
     "nuxt-windicss": "^2.0.7",
-    "nuxt3": "latest",
+    "nuxt3": "^3.0.0-27272804.ca557e7",
     "sass": "^1.43.3",
     "tailwindcss-ripple": "^0.7.1",
     "typescript": "^4.4.4",
     "windicss": "^3.1.9"
   },
   "dependencies": {
+    "@vueuse/core": "^6.7.4",
     "primeicons": "^4.1.0",
     "primevue": "^3.8.2",
     "vue-glitched-writer": "^1.2.2",
